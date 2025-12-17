@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passaporte Italiano - Aula 12</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fcfcfc;
+      color: #333;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      padding: 15px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #008C45 0%, #F4F5F0 50%, #CD212A 100%);
+      color: #333;
+      border: 1px solid #ddd;
+    }
+    h2 {
+      color: #005a2c; /* Verde escuro */
+      border-bottom: 2px solid #CD212A; /* Vermelho */
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    h3 {
+      color: #b21b22; /* Vermelho escuro */
+    }
+    code {
+      background: #eef8f2;
+      padding: 3px 7px;
+      border-radius: 5px;
+      font-size: 0.95em;
+      border: 1px solid #d0e8d9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #008C45; /* Verde */
+      color: white;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f8f8;
+    }
+    /* Estilo atualizado para o botão de áudio */
+    .audio-link {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      text-decoration: none;
+      font-size: 1.3em;
+      display: inline-block;
+      margin-top: 5px;
+      color: #CD212A;
+      transition: transform 0.2s;
+    }
+    .audio-link:hover {
+        transform: scale(1.2);
+    }
+    .audio-link:focus {
+        outline: none;
+    }
+    .nota-gramatical, .nota-dica, .bloco-cultural {
+      background: #fdfbeA;
+      border-left: 5px solid #008C45; /* Verde */
+      padding: 15px 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .nota-dica { border-left-color: #CD212A; background: #fff0f1; }
+    .bloco-cultural { border-left-color: #005a2c; background: #eef8f2; }
+    .secao-exercicios {
+      background-color: #f4f9ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+      border: 1px solid #d1e3ff;
+    }
+    .exercise-list li { margin-bottom: 15px; }
+    .pronuncia-guia {
+        font-style: italic;
+        color: #555;
+    }
+    .ipa {
+        font-family: 'Courier New', Courier, monospace;
+        color: #444;
+    }
+    .gabarito-section {
+        background-color: #fff8e1;
+        border: 1px solid #ffecb3;
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📘 Aula 12: Uma Viagem para as Montanhas 🇮🇹<br>(Una Gita in Montagna)</h1>
+
+<!-- Introdução -->
+<h2>1. Introdução</h2>
+<p><em>Ciao e bentornato/a!</em> Na aula passada, você aprendeu a usar o <em>Passato Prossimo</em> com o auxiliar <em>avere</em>. Hoje, vamos completar o quadro aprendendo a usar o outro auxiliar: <strong>essere</strong>. Vamos fazer uma viagem imaginária para as montanhas (<em>le montagne</em>) para aprender a usar os verbos de movimento e de estado no passado. Entender quando usar <em>essere</em> e, principalmente, como fazer a concordância do particípio passado, é uma das habilidades mais importantes do nível A2. Ao final desta aula, você será capaz de narrar viagens, deslocamentos e mudanças de estado com segurança e precisão. <em>Prepariamo la valigia e partiamo!</em> (Vamos preparar a mala e partir!)</p>
+
+<!-- Vocabulário -->
+<h2>2. Vocabulário-chave: Viagens e Movimento</h2>
+<table>
+  <tr>
+    <th>Italiano + Áudio</th>
+    <th>Tradução / Pronúncia</th>
+    <th>Italiano + Áudio</th>
+    <th>Tradução / Pronúncia</th>
+  </tr>
+  <tr>
+    <td><strong>La gita</strong> <button class="audio-link" onclick="playAudio('La gita')">🔊</button></td>
+    <td>O passeio, a excursão<br><span class="ipa">/la ˈdʒi.ta/</span><br><span class="pronuncia-guia">(La DJÍ-ta)</span></td>
+    <td><strong>Partire</strong> <button class="audio-link" onclick="playAudio('Partire')">🔊</button></td>
+    <td>Partir<br><span class="ipa">/parˈti.re/</span><br><span class="pronuncia-guia">(Par-TÍ-re)</span></td>
+  </tr>
+  <tr>
+    <td><strong>La montagna</strong> <button class="audio-link" onclick="playAudio('La montagna')">🔊</button></td>
+    <td>A montanha<br><span class="ipa">/la monˈtaɲ.ɲa/</span><br><span class="pronuncia-guia">(La mon-TÁ-nha)</span></td>
+    <td><strong>Arrivare</strong> <button class="audio-link" onclick="playAudio('Arrivare')">🔊</button></td>
+    <td>Chegar<br><span class="ipa">/ar.riˈva.re/</span><br><span class="pronuncia-guia">(Ar-ri-VÁ-re)</span></td>
+  </tr>
+  <tr>
+    <td><strong>L'albergo</strong> <button class="audio-link" onclick="playAudio('L\'albergo')">🔊</button></td>
+    <td>O hotel<br><span class="ipa">/lalˈbɛr.ɡo/</span><br><span class="pronuncia-guia">(Lal-BÉR-go)</span></td>
+    <td><strong>Entrare</strong> <button class="audio-link" onclick="playAudio('Entrare')">🔊</button></td>
+    <td>Entrar<br><span class="ipa">/enˈtra.re/</span><br><span class="pronuncia-guia">(En-TRÁ-re)</span></td>
+  </tr>
+    <tr>
+    <td><strong>La valigia</strong> <button class="audio-link" onclick="playAudio('La valigia')">🔊</button></td>
+    <td>A mala<br><span class="ipa">/la vaˈli.dʒa/</span><br><span class="pronuncia-guia">(La va-LÍ-dja)</span></td>
+    <td><strong>Uscire</strong> <button class="audio-link" onclick="playAudio('Uscire')">🔊</button></td>
+    <td>Sair<br><span class="ipa">/uʃˈʃi.re/</span><br><span class="pronuncia-guia">(U-SHÍ-re)</span></td>
+  </tr>
+  <tr>
+    <td><strong>Il sentiero</strong> <button class="audio-link" onclick="playAudio('Il sentiero')">🔊</button></td>
+    <td>A trilha<br><span class="ipa">/il senˈtjɛ.ro/</span><br><span class="pronuncia-guia">(Il sen-TIÉ-ro)</span></td>
+    <td><strong>Salire</strong> <button class="audio-link" onclick="playAudio('Salire')">🔊</button></td>
+    <td>Subir<br><span class="ipa">/saˈli.re/</span><br><span class="pronuncia-guia">(Sa-LÍ-re)</span></td>
+  </tr>
+   <tr>
+    <td><strong>La neve</strong> <button class="audio-link" onclick="playAudio('La neve')">🔊</button></td>
+    <td>A neve<br><span class="ipa">/la ˈne.ve/</span><br><span class="pronuncia-guia">(La NÊ-ve)</span></td>
+    <td><strong>Scendere</strong> <button class="audio-link" onclick="playAudio('Scendere')">🔊</button></td>
+    <td>Descer<br><span class="ipa">/ˈʃen.de.re/</span><br><span class="pronuncia-guia">(SHÊN-de-re)</span></td>
+  </tr>
+   <tr>
+    <td><strong>Il paesaggio</strong> <button class="audio-link" onclick="playAudio('Il paesaggio')">🔊</button></td>
+    <td>A paisagem<br><span class="ipa">/il pa.eˈzad.dʒo/</span><br><span class="pronuncia-guia">(Il pa-e-ZÁ-djo)</span></td>
+    <td><strong>Tornare</strong> <button class="audio-link" onclick="playAudio('Tornare')">🔊</button></td>
+    <td>Voltar, Retornar<br><span class="ipa">/torˈna.re/</span><br><span class="pronuncia-guia">(Tor-NÁ-re)</span></td>
+  </tr>
+   <tr>
+    <td><strong>La funivia</strong> <button class="audio-link" onclick="playAudio('La funivia')">🔊</button></td>
+    <td>O teleférico<br><span class="ipa">/la fu.niˈvi.a/</span><br><span class="pronuncia-guia">(La fu-ni-VÍ-a)</span></td>
+    <td><strong>Rimanere</strong> <button class="audio-link" onclick="playAudio('Rimanere')">🔊</button></td>
+    <td>Ficar, Permanecer<br><span class="ipa">/ri.maˈne.re/</span><br><span class="pronuncia-guia">(Ri-ma-NÊ-re)</span></td>
+  </tr>
+    <tr>
+    <td><strong>Il rifugio</strong> <button class="audio-link" onclick="playAudio('Il rifugio')">🔊</button></td>
+    <td>O refúgio (de montanha)<br><span class="ipa">/il riˈfu.dʒo/</span><br><span class="pronuncia-guia">(Il ri-FÚ-djo)</span></td>
+    <td><strong>Stare</strong> <button class="audio-link" onclick="playAudio('Stare')">🔊</button></td>
+    <td>Estar, Ficar<br><span class="ipa">/ˈsta.re/</span><br><span class="pronuncia-guia">(STÁ-re)</span></td>
+  </tr>
+    <tr>
+    <td><strong>Stancante</strong> <button class="audio-link" onclick="playAudio('Stancante')">🔊</button></td>
+    <td>Cansativo<br><span class="ipa">/stanˈkan.te/</span><br><span class="pronuncia-guia">(Stan-CÁN-te)</span></td>
+    <td><strong>Nascere</strong> <button class="audio-link" onclick="playAudio('Nascere')">🔊</button></td>
+    <td>Nascer<br><span class="ipa">/ˈnaʃ.ʃe.re/</span><br><span class="pronuncia-guia">(NÁ-she-re)</span></td>
+  </tr>
+</table>
+
+<!-- Gramática Essencial -->
+<h2>3. Gramática Essencial</h2>
+<div class="nota-gramatical">
+  <h4>💡 Passato Prossimo com o Auxiliar ESSERE</h4>
+  <p>Enquanto a maioria dos verbos usa <em>avere</em>, um grupo importante de verbos usa <strong>essere</strong> como auxiliar no Passato Prossimo. A escolha não é aleatória e segue algumas lógicas:</p>
+  
+  <h4>Quando Usar ESSERE?</h4>
+   <p>Use <em>essere</em> com:</p>
+   <ol>
+       <li><strong>Verbos de Movimento:</strong> <em>andare, venire, partire, arrivare, entrare, uscire, salire, scendere, tornare...</em></li>
+       <li><strong>Verbos de Estado ou Permanência:</strong> <em>essere, stare, rimanere...</em></li>
+       <li><strong>Verbos de Mudança de Estado:</strong> <em>nascere, morire, diventare...</em></li>
+       <li><strong>Verbos Reflexivos:</strong> Todos os verbos reflexivos (<em>lavarsi, svegliarsi...</em>) usam <em>essere</em>. (Veremos isso em detalhes mais tarde).</li>
+   </ol>
+
+  <h4>A Regra Mais Importante: A Concordância do Particípio</h4>
+  <p>Quando o auxiliar é <strong>ESSERE</strong>, o particípio passado se comporta como um adjetivo: ele deve <strong>concordar em gênero e número com o sujeito</strong> da frase.</p>
+  
+   <table>
+    <tr><th>Sujeito</th><th>Terminação do Particípio</th><th>Exemplo (Verbo ANDARE)</th></tr>
+    <tr><td>Masculino Singular (io, tu, lui)</td><td><strong>-o</strong></td><td>Marco è andat<strong>o</strong>.</td></tr>
+    <tr><td>Feminino Singular (io, tu, lei)</td><td><strong>-a</strong></td><td>Maria è andat<strong>a</strong>.</td></tr>
+    <tr><td>Masculino Plural (noi, voi, loro)</td><td><strong>-i</strong></td><td>Marco e Luca sono andat<strong>i</strong>.</td></tr>
+    <tr><td>Feminino Plural (noi, voi, loro)</td><td><strong>-e</strong></td><td>Maria e Sofia sono andat<strong>e</strong>.</td></tr>
+  </table>
+  <p>Se um grupo for misto (homens e mulheres), usa-se o masculino plural (<em>-i</em>).</p>
+
+   <h4>Exemplo Completo: Verbo PARTIRE (Partir)</h4>
+    <table>
+        <tr><th>Pessoa</th><th>Frase Exemplo + Áudio</th><th>Tradução</th></tr>
+        <tr><td>Io</td><td>Io sono partit<strong>o</strong> / partit<strong>a</strong> <button class="audio-link" onclick="playAudio('Io sono partito')">🔊</button></td><td>Eu parti</td></tr>
+        <tr><td>Tu</td><td>Tu sei partit<strong>o</strong> / partit<strong>a</strong> <button class="audio-link" onclick="playAudio('Tu sei partito')">🔊</button></td><td>Você partiu</td></tr>
+        <tr><td>Lui / Lei</td><td>Lui è partit<strong>o</strong>. / Lei è partit<strong>a</strong>. <button class="audio-link" onclick="playAudio('Lui è partito. Lei è partita.')">🔊</button></td><td>Ele partiu. / Ela partiu.</td></tr>
+        <tr><td>Noi</td><td>Noi siamo partit<strong>i</strong> / partit<strong>e</strong> <button class="audio-link" onclick="playAudio('Noi siamo partiti')">🔊</button></td><td>Nós partimos</td></tr>
+        <tr><td>Voi</td><td>Voi siete partit<strong>i</strong> / partit<strong>e</strong> <button class="audio-link" onclick="playAudio('Voi siete partiti')">🔊</button></td><td>Vocês partiram</td></tr>
+        <tr><td>Loro</td><td>Loro sono partit<strong>i</strong> / partit<strong>e</strong> <button class="audio-link" onclick="playAudio('Loro sono partiti')">🔊</button></td><td>Eles / Elas partiram</td></tr>
+    </table>
+</div>
+
+<!-- Frases Essenciais -->
+<h2>4. Frases Essenciais para o Dia a Dia</h2>
+<table>
+    <tr><th>Italiano + Áudio</th><th>Pronúncia (IPA / Simplificada)</th><th>Tradução</th></tr>
+    <tr><td>1. Dove sei andato in vacanza? <button class="audio-link" onclick="playAudio('Dove sei andato in vacanza?')">🔊</button></td><td><span class="ipa">/ˈdo.ve sɛi anˈda.to in vaˈkan.tsa/</span><br><span class="pronuncia-guia">(DÔ-ve séi an-DÁ-to in va-CÁN-tsa?)</span></td><td>Onde você foi de férias? (para um homem)</td></tr>
+    <tr><td>2. Sono andata in montagna con la mia famiglia. <button class="audio-link" onclick="playAudio('Sono andata in montagna con la mia famiglia.')">🔊</button></td><td><span class="ipa">/ˈso.no anˈda.ta in monˈtaɲ.ɲa kon la ˈmi.a faˈmiʎ.ʎa/</span><br><span class="pronuncia-guia">(SÔ-no an-DÁ-ta in mon-TÁ-nha con la MÍ-a fa-MÍ-lha)</span></td><td>Eu fui para a montanha com minha família. (dito por uma mulher)</td></tr>
+    <tr><td>3. A che ora siete partiti? <button class="audio-link" onclick="playAudio('A che ora siete partiti?')">🔊</button></td><td><span class="ipa">/a ke ˈo.ra ˈsjɛ.te parˈti.ti/</span><br><span class="pronuncia-guia">(A ke Ô-ra SIÉ-te par-TÍ-ti?)</span></td><td>A que horas vocês partiram?</td></tr>
+    <tr><td>4. Siamo partiti molto presto. <button class="audio-link" onclick="playAudio('Siamo partiti molto presto.')">🔊</button></td><td><span class="ipa">/ˈsja.mo parˈti.ti ˈmol.to ˈprɛ.sto/</span><br><span class="pronuncia-guia">(SIÁ-mo par-TÍ-ti MÓL-to PRÉS-to)</span></td><td>Nós partimos muito cedo.</td></tr>
+    <tr><td>5. Paolo è arrivato ieri sera. <button class="audio-link" onclick="playAudio('Paolo è arrivato ieri sera.')">🔊</button></td><td><span class="ipa">/ˈpa.o.lo ɛ ar.riˈva.to ˈjɛ.ri ˈse.ra/</span><br><span class="pronuncia-guia">(PÁ-o-lo é ar-ri-VÁ-to IÉ-ri SÊ-ra)</span></td><td>Paolo chegou ontem à noite.</td></tr>
+    <tr><td>6. Le mie amiche sono arrivate stamattina. <button class="audio-link" onclick="playAudio('Le mie amiche sono arrivate stamattina.')">🔊</button></td><td><span class="ipa">/le ˈmi.e aˈmi.ke ˈso.no ar.riˈva.te sta.matˈti.na/</span><br><span class="pronuncia-guia">(Le MÍ-e a-MÍ-ke SÔ-no ar-ri-VÁ-te sta-mat-TÍ-na)</span></td><td>Minhas amigas chegaram esta manhã.</td></tr>
+    <tr><td>7. Perché sei tornato così tardi? <button class="audio-link" onclick="playAudio('Perché sei tornato così tardi?')">🔊</button></td><td><span class="ipa">/perˈke ˈsɛi torˈna.to koˈsi ˈtar.di/</span><br><span class="pronuncia-guia">(Per-KÉ séi tor-NÁ-to co-ZÍ TÁR-di?)</span></td><td>Por que você voltou tão tarde? (para um homem)</td></tr>
+    <tr><td>8. Sono entrato in albergo alle dieci. <button class="audio-link" onclick="playAudio('Sono entrato in albergo alle dieci.')">🔊</button></td><td><span class="ipa">/ˈso.no enˈtra.to in alˈbɛr.ɡo ˈal.le ˈdjɛ.tʃi/</span><br><span class="pronuncia-guia">(SÔ-no en-TRÁ-to in al-BÉR-go ÁL-le DIÉ-tchi)</span></td><td>Eu entrei no hotel às dez. (dito por um homem)</td></tr>
+    <tr><td>9. Marta è uscita con le sue amiche. <button class="audio-link" onclick="playAudio('Marta è uscita con le sue amiche.')">🔊</button></td><td><span class="ipa">/ˈmar.ta ɛ uʃˈʃi.ta kon le ˈsu.e aˈmi.ke/</span><br><span class="pronuncia-guia">(MÁR-ta é u-SHÍ-ta con le SÚ-e a-MÍ-ke)</span></td><td>Marta saiu com suas amigas.</td></tr>
+    <tr><td>10. Siamo saliti in cima alla montagna. <button class="audio-link" onclick="playAudio('Siamo saliti in cima alla montagna.')">🔊</button></td><td><span class="ipa">/ˈsja.mo saˈli.ti in ˈtʃi.ma ˈal.la monˈtaɲ.ɲa/</span><br><span class="pronuncia-guia">(SIÁ-mo sa-LÍ-ti in TCHÍ-ma ÁL-la mon-TÁ-nha)</span></td><td>Nós subimos ao topo da montanha.</td></tr>
+    <tr><td>11. Poi siamo scese con la funivia. <button class="audio-link" onclick="playAudio('Poi siamo scese con la funivia.')">🔊</button></td><td><span class="ipa">/ˈpɔi ˈsja.mo ˈʃe.ze kon la fu.niˈvi.a/</span><br><span class="pronuncia-guia">(Pói SIÁ-mo SHÊ-ze con la fu-ni-VÍ-a)</span></td><td>Depois nós descemos com o teleférico. (dito por mulheres)</td></tr>
+    <tr><td>12. Siete stati in Italia l'anno scorso? <button class="audio-link" onclick="playAudio('Siete stati in Italia l\'anno scorso?')">🔊</button></td><td><span class="ipa">/ˈsjɛ.te ˈsta.ti in iˈta.lja ˈlan.no ˈskor.so/</span><br><span class="pronuncia-guia">(SIÉ-te STÁ-ti in i-TÁ-lia LÁN-no SCÓR-so?)</span></td><td>Vocês estiveram na Itália no ano passado?</td></tr>
+    <tr><td>13. No, siamo stati in Francia. <button class="audio-link" onclick="playAudio('No, siamo stati in Francia.')">🔊</button></td><td><span class="ipa">/ˈnɔ ˈsja.mo ˈsta.ti in ˈfran.tʃa/</span><br><span class="pronuncia-guia">(Nó, SIÁ-mo STÁ-ti in FRÁN-tcha)</span></td><td>Não, nós estivemos na França.</td></tr>
+    <tr><td>14. I miei nonni sono nati in un piccolo paese. <button class="audio-link" onclick="playAudio('I miei nonni sono nati in un piccolo paese.')">🔊</button></td><td><span class="ipa">/i ˈmjɛ.i ˈnɔn.ni ˈso.no ˈna.ti in um ˈpik.ko.lo paˈe.ze/</span><br><span class="pronuncia-guia">(I miêi NÓN-ni SÔ-no NÁ-ti in um PÍC-co-lo pa-Ê-ze)</span></td><td>Meus avós nasceram em uma cidade pequena.</td></tr>
+    <tr><td>15. Mia sorella è diventata medico. <button class="audio-link" onclick="playAudio('Mia sorella è diventata medico.')">🔊</button></td><td><span class="ipa">/ˈmi.a soˈɾɛl.la ɛ di.venˈta.ta ˈmɛ.di.ko/</span><br><span class="pronuncia-guia">(MÍ-a so-RÉL-la é di-ven-TÁ-ta MÉ-di-co)</span></td><td>Minha irmã se tornou médica.</td></tr>
+    <tr><td>16. Non sono andato alla festa. <button class="audio-link" onclick="playAudio('Non sono andato alla festa.')">🔊</button></td><td><span class="ipa">/non ˈso.no anˈda.to ˈal.la ˈfɛ.sta/</span><br><span class="pronuncia-guia">(Non SÔ-no an-DÁ-to ÁL-la FÉS-ta)</span></td><td>Eu não fui à festa. (dito por um homem)</td></tr>
+    <tr><td>17. Perché non sei venuta? <button class="audio-link" onclick="playAudio('Perché non sei venuta?')">🔊</button></td><td><span class="ipa">/perˈke non ˈsɛi veˈnu.ta/</span><br><span class="pronuncia-guia">(Per-KÉ non séi ve-NÚ-ta?)</span></td><td>Por que você não veio? (para uma mulher)</td></tr>
+    <tr><td>18. Ieri sono rimasto a casa tutto il giorno. <button class="audio-link" onclick="playAudio('Ieri sono rimasto a casa tutto il giorno.')">🔊</button></td><td><span class="ipa">/ˈjɛ.ri ˈso.no riˈma.sto a ˈka.za ˈtut.to il ˈdʒor.no/</span><br><span class="pronuncia-guia">(IÉ-ri SÔ-no ri-MÁS-to a KÁ-za TÚT-to il DJÓR-no)</span></td><td>Ontem eu fiquei em casa o dia todo. (dito por um homem)</td></tr>
+    <tr><td>19. Siamo rimaste in albergo a causa della pioggia. <button class="audio-link" onclick="playAudio('Siamo rimaste in albergo a causa della pioggia.')">🔊</button></td><td><span class="ipa">/ˈsja.mo riˈma.ste in alˈbɛr.ɡo a ˈkau.za ˈdel.la ˈpjɔd.dʒa/</span><br><span class="pronuncia-guia">(SIÁ-mo ri-MÁS-te in al-BÉR-go a CÁU-za DÉL-la PIÓ-dja)</span></td><td>Nós ficamos no hotel por causa da chuva. (dito por mulheres)</td></tr>
+    <tr><td>20. La gita è stata stancante ma bellissima. <button class="audio-link" onclick="playAudio('La gita è stata stancante ma bellissima.')">🔊</button></td><td><span class="ipa">/la ˈdʒi.ta ɛ ˈsta.ta stanˈkan.te ma belˈlis.si.ma/</span><br><span class="pronuncia-guia">(La DJÍ-ta é STÁ-ta stan-CÁN-te ma bel-LÍS-si-ma)</span></td><td>O passeio foi cansativo mas belíssimo.</td></tr>
+    <tr><td>21. Quando sei nato? <button class="audio-link" onclick="playAudio('Quando sei nato?')">🔊</button></td><td><span class="ipa">/ˈkwan.do ˈsɛi ˈna.to/</span><br><span class="pronuncia-guia">(QUÁN-do séi NÁ-to?)</span></td><td>Quando você nasceu? (para um homem)</td></tr>
+    <tr><td>22. Sono nata nel 1990. <button class="audio-link" onclick="playAudio('Sono nata nel 1990.')">🔊</button></td><td><span class="ipa">/ˈso.no ˈna.ta nel mil.le.nɔ.veˈtʃɛn.to noˈvan.ta/</span><br><span class="pronuncia-guia">(SÔ-no NÁ-ta nel mil-le-no-ve-TCHÊN-to no-VÁN-ta)</span></td><td>Eu nasci em 1990. (dito por uma mulher)</td></tr>
+    <tr><td>23. L'estate scorsa siamo andati al mare. <button class="audio-link" onclick="playAudio('L\'estate scorsa siamo andati al mare.')">🔊</button></td><td><span class="ipa">/leˈsta.te ˈskor.sa ˈsja.mo anˈda.ti al ˈma.re/</span><br><span class="pronuncia-guia">(Les-TÁ-te SCÓR-sa SIÁ-mo an-DÁ-ti al MÁ-re)</span></td><td>No verão passado nós fomos ao mar.</td></tr>
+    <tr><td>24. Sono cresciuto in Brasile. <button class="audio-link" onclick="playAudio('Sono cresciuto in Brasile.')">🔊</button></td><td><span class="ipa">/ˈso.no kreʃˈʃu.to in braˈzi.le/</span><br><span class="pronuncia-guia">(SÔ-no cre-SHÚ-to in bra-ZÍ-le)</span></td><td>Eu cresci no Brasil. (dito por um homem)</td></tr>
+    <tr><td>25. La mia valigia non è arrivata. <button class="audio-link" onclick="playAudio('La mia valigia non è arrivata.')">🔊</button></td><td><span class="ipa">/la ˈmi.a vaˈli.dʒa non ɛ ar.riˈva.ta/</span><br><span class="pronuncia-guia">(La MÍ-a va-LÍ-dja non é ar-ri-VÁ-ta)</span></td><td>A minha mala não chegou.</td></tr>
+    <tr><td>26. I miei amici sono già partiti. <button class="audio-link" onclick="playAudio('I miei amici sono già partiti.')">🔊</button></td><td><span class="ipa">/i ˈmjɛ.i aˈmi.tʃi ˈso.no ˈdʒa parˈti.ti/</span><br><span class="pronuncia-guia">(I miêi a-MÍ-tchi SÔ-no djá par-TÍ-ti)</span></td><td>Meus amigos já partiram.</td></tr>
+    <tr><td>27. A che ora è cominciato il film? <button class="audio-link" onclick="playAudio('A che ora è cominciato il film?')">🔊</button></td><td><span class="ipa">/a ke ˈo.ra ɛ ko.minˈtʃa.to il ˈfilm/</span><br><span class="pronuncia-guia">(A ke Ô-ra é co-min-TCHÁ-to il film?)</span></td><td>A que horas o filme começou?</td></tr>
+    <tr><td>28. La lezione è finita dieci minuti fa. <button class="audio-link" onclick="playAudio('La lezione è finita dieci minuti fa.')">🔊</button></td><td><span class="ipa">/la letˈtsjo.ne ɛ fiˈni.ta ˈdjɛ.tʃi miˈnu.ti fa/</span><br><span class="pronuncia-guia">(La le-TSIÔ-ne é fi-NÍ-ta DIÉ-tchi mi-NÚ-ti fá)</span></td><td>A aula terminou há dez minutos.</td></tr>
+    <tr><td>29. L'incidente è successo in centro. <button class="audio-link" onclick="playAudio('L\'incidente è successo in centro.')">🔊</button></td><td><span class="ipa">/lin.tʃiˈdɛn.te ɛ sutˈtʃɛs.so in ˈtʃɛn.tro/</span><br><span class="pronuncia-guia">(Lin-tchi-DÊN-te é su-TCHÊS-so in TCHÊN-tro)</span></td><td>O acidente aconteceu no centro.</td></tr>
+    <tr><td>30. Sei mai stata a Venezia? <button class="audio-link" onclick="playAudio('Sei mai stata a Venezia?')">🔊</button></td><td><span class="ipa">/ˈsɛi ˈmai ˈsta.ta a veˈnɛt.tsja/</span><br><span class="pronuncia-guia">(Séi mái STÁ-ta a Ve-NÉ-tsia?)</span></td><td>Você já esteve em Veneza? (para uma mulher)</td></tr>
+    <tr><td>31. Sì, ci sono stata due anni fa. <button class="audio-link" onclick="playAudio('Sì, ci sono stata due anni fa.')">🔊</button></td><td><span class="ipa">/ˈsi tʃi ˈso.no ˈsta.ta ˈdu.e ˈan.ni fa/</span><br><span class="pronuncia-guia">(Sì, tchi SÔ-no STÁ-ta DÚ-e ÁN-ni fá)</span></td><td>Sim, estive lá há dois anos.</td></tr>
+    <tr><td>32. Non siamo mai saliti sulla Torre di Pisa. <button class="audio-link" onclick="playAudio('Non siamo mai saliti sulla Torre di Pisa.')">🔊</button></td><td><span class="ipa">/non ˈsja.mo ˈmai saˈli.ti ˈsul.la ˈtor.re di ˈpi.za/</span><br><span class="pronuncia-guia">(Non SIÁ-mo MÁI sa-LÍ-ti SÚL-la TÓR-re di PÍ-za)</span></td><td>Nós nunca subimos na Torre de Pisa.</td></tr>
+    <tr><td>33. Siete entrati dal cancello principale? <button class="audio-link" onclick="playAudio('Siete entrati dal cancello principale?')">🔊</button></td><td><span class="ipa">/ˈsjɛ.te enˈtra.ti dal kanˈtʃɛl.lo prin.tʃiˈpa.le/</span><br><span class="pronuncia-guia">(SIÉ-te en-TRÁ-ti dal can-TCHÊL-lo prin-tchi-PÁ-le?)</span></td><td>Vocês entraram pelo portão principal?</td></tr>
+    <tr><td>34. La neve è scesa per tutta la notte. <button class="audio-link" onclick="playAudio('La neve è scesa per tutta la notte.')">🔊</button></td><td><span class="ipa">/la ˈne.ve ɛ ˈʃe.za per ˈtut.ta la ˈnɔt.te/</span><br><span class="pronuncia-guia">(La NÊ-ve é SHÊ-za per TÚT-ta la NÓT-te)</span></td><td>A neve caiu (desceu) a noite toda.</td></tr>
+    <tr><td>35. Il prezzo della benzina è aumentato molto. <button class="audio-link" onclick="playAudio('Il prezzo della benzina è aumentato molto.')">🔊</button></td><td><span class="ipa">/il ˈprɛt.tso ˈdel.la benˈdzi.na ɛ au.menˈta.to ˈmol.to/</span><br><span class="pronuncia-guia">(Il PRÉT-tso DÉL-la ben-DZÍ-na é au-men-TÁ-to MÓL-to)</span></td><td>O preço da gasolina aumentou muito.</td></tr>
+    <tr><td>36. Sono rimasta senza parole. <button class="audio-link" onclick="playAudio('Sono rimasta senza parole.')">🔊</button></td><td><span class="ipa">/ˈso.no riˈma.sta ˈsɛn.tsa paˈrɔ.le/</span><br><span class="pronuncia-guia">(SÔ-no ri-MÁS-ta SÊN-tsa pa-RÓ-le)</span></td><td>Eu fiquei sem palavras. (dito por uma mulher)</td></tr>
+    <tr><td>37. Il bambino è caduto dalla bicicletta. <button class="audio-link" onclick="playAudio('Il bambino è caduto dalla bicicletta.')">🔊</button></td><td><span class="ipa">/il bamˈbi.no ɛ kaˈdu.to ˈdal.la bi.tʃiˈklet.ta/</span><br><span class="pronuncia-guia">(Il bam-BÍ-no é ca-DÚ-to DÁL-la bi-tchi-CLÉT-ta)</span></td><td>O menino caiu da bicicleta.</td></tr>
+    <tr><td>38. Le ragazze sono tornate a casa. <button class="audio-link" onclick="playAudio('Le ragazze sono tornate a casa.')">🔊</button></td><td><span class="ipa">/le raˈɡat.tse ˈso.no torˈna.te a ˈka.za/</span><br><span class="pronuncia-guia">(Le ra-GÁT-tse SÔ-no tor-NÁ-te a KÁ-za)</span></td><td>As moças voltaram para casa.</td></tr>
+    <tr><td>39. Il mio bisnonno è morto nel 2005. <button class="audio-link" onclick="playAudio('Il mio bisnonno è morto nel 2005.')">🔊</button></td><td><span class="ipa">/il ˈmi.o bizˈnɔn.no ɛ ˈmɔr.to nel dweˈmi.laˈtʃiŋ.kwe/</span><br><span class="pronuncia-guia">(Il MÍ-o biz-NÓN-no é MÓR-to nel due-mí-la-TCHÍN-que)</span></td><td>Meu bisavô morreu em 2005.</td></tr>
+    <tr><td>40. Ieri sera sono uscita per una passeggiata. <button class="audio-link" onclick="playAudio('Ieri sera sono uscita per una passeggiata.')">🔊</button></td><td><span class="ipa">/ˈjɛ.ri ˈse.ra ˈso.no uʃˈʃi.ta per ˈu.na pas.sedˈdʒa.ta/</span><br><span class="pronuncia-guia">(IÉ-ri SÊ-ra SÔ-no u-SHÍ-ta per Ú-na pas-se-DJÁ-ta)</span></td><td>Ontem à noite eu saí para um passeio. (dito por uma mulher)</td></tr>
+    <tr><td>41. Siamo entrati nel negozio sbagliato. <button class="audio-link" onclick="playAudio('Siamo entrati nel negozio sbagliato.')">🔊</button></td><td><span class="ipa">/ˈsja.mo enˈtra.ti nel neˈɡɔt.tsjo zbaʎˈʎa.to/</span><br><span class="pronuncia-guia">(SIÁ-mo en-TRÁ-ti nel ne-GÓ-tsio zba-LHIÁ-to)</span></td><td>Nós entramos na loja errada.</td></tr>
+    <tr><td>42. I fiori sono cresciuti in giardino. <button class="audio-link" onclick="playAudio('I fiori sono cresciuti in giardino.')">🔊</button></td><td><span class="ipa">/i ˈfjo.ri ˈso.no kreʃˈʃu.ti in dʒarˈdi.no/</span><br><span class="pronuncia-guia">(I FIÔ-ri SÔ-no cre-SHÚ-ti in djar-DÍ-no)</span></td><td>As flores cresceram no jardim.</td></tr>
+    <tr><td>43. Il concerto è piaciuto a tutti. <button class="audio-link" onclick="playAudio('Il concerto è piaciuto a tutti.')">🔊</button></td><td><span class="ipa">/il konˈtʃɛr.to ɛ pjaˈtʃu.to a ˈtut.ti/</span><br><span class="pronuncia-guia">(Il con-TCHÉR-to é pia-TCHÚ-to a TÚT-ti)</span></td><td>O show agradou a todos. (Todos gostaram do show.)</td></tr>
+    <tr><td>44. La vacanza è costata troppo. <button class="audio-link" onclick="playAudio('La vacanza è costata troppo.')">🔊</button></td><td><span class="ipa">/la vaˈkan.tsa ɛ koˈsta.ta ˈtrɔp.po/</span><br><span class="pronuncia-guia">(La va-CÁN-tsa é cos-TÁ-ta TRÓP-po)</span></td><td>As férias custaram muito.</td></tr>
+    <tr><td>45. Sei già stato al Colosseo? <button class="audio-link" onclick="playAudio('Sei già stato al Colosseo?')">🔊</button></td><td><span class="ipa">/ˈsɛi ˈdʒa ˈsta.to al ko.losˈsɛ.o/</span><br><span class="pronuncia-guia">(Séi djá STÁ-to al co-los-SÉ-o?)</span></td><td>Você já esteve no Coliseu? (para um homem)</td></tr>
+    <tr><td>46. No, non ci sono mai stato. <button class="audio-link" onclick="playAudio('No, non ci sono mai stato.')">🔊</button></td><td><span class="ipa">/ˈnɔ non tʃi ˈso.no ˈmai ˈsta.to/</span><br><span class="pronuncia-guia">(Nó, non tchi SÔ-no MÁI STÁ-to)</span></td><td>Não, eu nunca estive lá.</td></tr>
+    <tr><td>47. È piovuto tutto il giorno. <button class="audio-link" onclick="playAudio('È piovuto tutto il giorno.')">🔊</button></td><td><span class="ipa">/ɛ pjoˈvu.to ˈtut.to il ˈdʒor.no/</span><br><span class="pronuncia-guia">(É pio-VÚ-to TÚT-to il DJÓR-no)</span></td><td>Choveu o dia todo.</td></tr>
+    <tr><td>48. Ieri è nevicato in montagna. <button class="audio-link" onclick="playAudio('Ieri è nevicato in montagna.')">🔊</button></td><td><span class="ipa">/ˈjɛ.ri ɛ ne.viˈka.to in monˈtaɲ.ɲa/</span><br><span class="pronuncia-guia">(IÉ-ri é ne-vi-CÁ-to in mon-TÁ-nha)</span></td><td>Ontem nevou na montanha.</td></tr>
+    <tr><td>49. La mia vita è cambiata molto. <button class="audio-link" onclick="playAudio('La mia vita è cambiata molto.')">🔊</button></td><td><span class="ipa">/la ˈmi.a ˈvi.ta ɛ kamˈbja.ta ˈmol.to/</span><br><span class="pronuncia-guia">(La MÍ-a VÍ-ta é cam-BIÁ-ta MÓL-to)</span></td><td>Minha vida mudou muito.</td></tr>
+    <tr><td>50. Siamo diventati buoni amici. <button class="audio-link" onclick="playAudio('Siamo diventati buoni amici.')">🔊</button></td><td><span class="ipa">/ˈsja.mo di.venˈta.ti ˈbwɔ.ni aˈmi.tʃi/</span><br><span class="pronuncia-guia">(SIÁ-mo di-ven-TÁ-ti BUÔ-ni a-MÍ-tchi)</span></td><td>Nós nos tornamos bons amigos.</td></tr>
+</table>
+
+<!-- Texto para Análise -->
+<h2>5. Texto para Análise: La Gita a Cortina</h2>
+<p><strong>Leitura em Italiano:</strong></p>
+<p>
+La settimana scorsa, la mia famiglia ed io siamo andati a Cortina, una famosa località in montagna. Siamo partiti venerdì sera da casa e siamo arrivati in albergo molto tardi. Sabato mattina, dopo colazione, siamo saliti con la funivia fino a un rifugio a tremila metri. Il paesaggio era incredibile! C'era molta neve e siamo rimasti lì per ore. Mia sorella è scivolata ed è caduta, ma per fortuna non si è fatta male. A pranzo abbiamo mangiato al rifugio e poi siamo scesi a valle. Domenica, purtroppo, il tempo è cambiato ed è piovuto. Siamo rimasti in paese e abbiamo visitato i negozi. Io e mio fratello siamo entrati in una libreria. Le nostre sorelle, invece, sono andate in un negozio di dolci. Siamo tornati a casa domenica sera, stanchi ma felici. È stata una gita indimenticabile.
+</p>
+<p><strong>Pergunta:</strong> O que aconteceu com a irmã do narrador no sábado?</p>
+<ol type="A">
+  <li>È rimasta in albergo tutto il giorno.</li>
+  <li>È scivolata sulla neve ed è caduta.</li>
+  <li>È scesa dalla montagna a piedi.</li>
+</ol>
+
+<!-- Exercícios -->
+<h2>6. Exercícios de Fixação 📝</h2>
+<div class="secao-exercicios">
+  <h4>Exercícios</h4>
+  <ol class="exercise-list">
+    <li>Complete a frase: "Maria (andare) _________ al cinema ieri."</li>
+    <li>Escolha o auxiliar correto: "Noi (siamo/abbiamo) partiti alle otto."</li>
+    <li>Conjugue o verbo na pessoa e forma corretas: "Tu (arrivare) _________ in ritardo." (para uma mulher)</li>
+    <li>Complete a frase: "Io e Marco (tornare) _________ a casa tardi."</li>
+    <li>Traduza para o italiano: "Meus pais nasceram na Itália."</li>
+    <li>Complete a frase: "Le ragazze (uscire) _________ per fare una passeggiata."</li>
+    <li>Escolha o particípio correto: "Carla, perché sei (rimasto/rimasta) qui?"</li>
+    <li>Traduza para o italiano: "Eu não fui à escola hoje." (dito por um homem)</li>
+    <li>Complete a frase: "Voi (stare) _________ a casa tutto il weekend?"</li>
+    <li>Conjugue o verbo na pessoa e forma corretas: "Io (nascere) _________ nel 1995." (dito por uma mulher)</li>
+  </ol>
+</div>
+
+<!-- Pronúncia -->
+<h2>8. Pronúncia e Repetição 🔉</h2>
+<div class="nota-dica">
+  <h4>Dica de Pronúncia: Os Sons de `SCE` e `SCI`</h4>
+  <p>Na aula 4, vimos o som de `SC` antes de a, o, u (som de SK). Hoje, vamos focar no som suave, que é muito comum em verbos de movimento como `scendere`.</p>
+  <p>O som de `SCE` e `SCI` é idêntico ao "SHE" e "SHI" em inglês, ou ao nosso "XE" e "XI" em português.</p>
+  <ul>
+    <li><strong>SCE</strong> (som de "shê"):
+      <ul>
+        <li>Ex: <strong>Sce</strong>ndere (SHÊN-de-re - descer), Pe<strong>sce</strong> (PÊ-she - peixe), Cono<strong>sce</strong>re (Co-nô-SHE-re - conhecer)</li>
+      </ul>
+    </li>
+    <li><strong>SCI</strong> (som de "shi"):
+      <ul>
+        <li>Ex: U<strong>sci</strong>re (U-SHÍ-re - sair), <strong>Sci</strong>are (SHI-Á-re - esquiar), Fa<strong>sci</strong>a (FÁ-sha - faixa)</li>
+      </ul>
+    </li>
+  </ul>
+   <p>Lembre-se de não pronunciar o "i" em palavras como `scienza` (SHÊN-tsa) ou `coscienza` (co-SHÊN-tsa), onde ele serve apenas para criar o som suave antes de outra vogal.</p>
+</div>
+
+<!-- Expressões culturais -->
+<h2>9. Expressões Culturais 🇮🇹</h2>
+<div class="bloco-cultural">
+  <h4>La Settimana Bianca</h4>
+  <p>Para muitos italianos, especialmente do Norte e do Centro, ir para as montanhas no inverno é uma tradição sagrada. A <strong>"settimana bianca"</strong> (a semana branca) é a clássica semana de férias na neve, geralmente entre o Natal e março. Famílias inteiras e grupos de amigos vão para resorts de esqui nos Alpes ou nos Apeninos. O dia é dedicado a esquiar (<em>sciare</em>) e praticar snowboard, enquanto as noites são passadas em refúgios de montanha (<em>rifugi</em>) ou nos charmosos vilarejos, desfrutando de comida local robusta, como polenta e queijos, e do vinho quente (<em>vin brulé</em>). É um pilar do estilo de vida italiano, combinando amor pelo esporte, pela natureza e, claro, pela boa companhia.</p>
+</div>
+
+<!-- Resumo -->
+<h2>10. Resumo da Aula 📑</h2>
+<ul>
+  <li>O Passato Prossimo também usa o auxiliar <strong>essere</strong>, principalmente com verbos de <strong>movimento, estado, mudança de estado e reflexivos</strong>.</li>
+  <li>A regra de ouro: quando o auxiliar é <strong>ESSERE</strong>, o particípio passado <strong>concorda com o sujeito</strong> em gênero e número (andat<strong>o</strong>, andat<strong>a</strong>, andat<strong>i</strong>, andat<strong>e</strong>).</li>
+  <li>Você aprendeu a narrar experiências de viagem e deslocamentos no passado.</li>
+</ul>
+
+<!-- Desafio -->
+<h2>11. Desafio da Aula 🚀</h2>
+<p>Conte sobre uma viagem ou um passeio que você fez. Escreva um pequeno parágrafo (pelo menos 4 frases) usando o Passato Prossimo com o auxiliar <strong>essere</strong>. Descreva para onde você foi, quando partiu, quando voltou e como foi. Lembre-se de fazer a concordância do particípio! Exemplo: <em>"L'anno scorso sono andato/a a Roma. Sono partito/a di venerdì e sono tornato/a di domenica. È stata una bella vacanza!"</em>. <em>In bocca al lupo!</em></p>
+
+<!-- Gabarito -->
+<h2>12. Gabarito 📝</h2>
+<div class="gabarito-section">
+  <h4>Seção 5: Texto para Análise</h4>
+  <p>Resposta correta: <strong>B</strong> (È scivolata sulla neve ed è caduta.)</p>
+  <h4>Seção 6: Exercícios de Fixação</h4>
+  <ol>
+    <li>è andata</li>
+    <li>siamo</li>
+    <li>sei arrivata</li>
+    <li>siamo tornati</li>
+    <li>I miei genitori sono nati in Italia.</li>
+    <li>sono uscite</li>
+    <li>rimasta</li>
+    <li>Non sono andato a scuola oggi.</li>
+    <li>siete stati</li>
+    <li>sono nata</li>
+  </ol>
+</div>
+
+<script>
+    function playAudio(text) {
+        if ('speechSynthesis' in window) {
+            // Cancelar qualquer áudio que esteja tocando
+            window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'it-IT'; // Define o idioma para Italiano
+            utterance.rate = 0.9; // Velocidade um pouco mais lenta para melhor compreensão
+            
+            window.speechSynthesis.speak(utterance);
+        } else {
+            alert("Desculpe, seu navegador não suporta a funcionalidade de áudio nativa.");
+        }
+    }
+</script>
+
+</body>
+</html>
